@@ -334,15 +334,15 @@
     <h2>Koordináta-rendszerek átváltása offline</h2>
     <p>A <strong>KoordKonvert</strong> alkalmazás lehetőséget biztosít különféle koordináta-rendszerek közötti offline átváltásra. A földmérők, túrázók, katonák, mentők, természetvédők és térinformatikusok számára nélkülözhetetlen eszköz, ha internetkapcsolat nélküli, mégis precíz helymeghatározásra van szükség. A támogatott rendszerek:</p>
     <ul>
-        <li><strong>DD</strong> – Decimal Degrees</li>
-        <li><strong>DDM</strong> – Degrees Decimal Minutes</li>
-        <li><strong>DMS</strong> – Degrees Minutes Seconds</li>
+        <li><strong>DD</strong> – Fok</li>
+        <li><strong>DDM</strong> – Fok, Szögperc</li>
+        <li><strong>DMS</strong> – Fok, Szögperc, Szögmásodperc</li>
         <li><strong>UTM</strong> – Universal Transverse Mercator</li>
         <li><strong>MGRS</strong> – Military Grid Reference System</li>
         <li><strong>EOV</strong> – Egységes Országos Vetület</li>
     </ul>
 
-    <h3>Földrajzi koordináta-rendszer (geodéziai vagy gömbi)</h3>
+    <h3>1) Földrajzi koordináta-rendszer (geodéziai vagy gömbi)</h3>
     <p>A földrajzi koordináta-rendszer a Föld felszínén egy pont helyét a <strong>szélesség (φ)</strong> és a <strong>hosszúság (λ)</strong> szögeivel határozza meg, fokban mérve. Alapja általában a <strong>WGS84</strong> referenciaellipszoid. A rendszer az Egyenlítőhöz és a greenwichi kezdőmeridiánhoz viszonyít.</p>
     <h4>Földrajzi szélesség (φ)</h4>
     <p>A szélesség a Föld középpontja és a pont közötti egyenes, valamint az Egyenlítő síkja által bezárt szög. Értéktartománya 0° (Egyenlítő) és ±90° (Északi-sark: +90°, Déli-sark: -90°). Északi irány pozitív (N), déli irány negatív (S). Az azonos szélességű pontok <strong>szélességi köröket</strong> alkotnak, amelyek az Egyenlítővel párhuzamosak.</p>
@@ -356,9 +356,8 @@
         <li><strong>DMS (Degrees Minutes Seconds):</strong> Fok, perc, másodperc, pl. 47° 29′ 56″, 19° 2′ 37″</li>
     </ul>
     <p>Példa: A budapesti Lánchíd középpontja <em>é. sz. 47° 29′ 56″, k. h. 19° 02′ 37″</em> (DMS), vagy <em>47.49897°, 19.04360°</em> (DD).</p>
-    <p>A KoordKonvert lehetővé teszi a földrajzi koordináták gyors átváltását DD, DDM és DMS formátumok között, offline is, így ideális terepi használatra.</p>
 
-    <h3>UTM – Universal Transverse Mercator</h3>
+    <h3>2) UTM – Universal Transverse Mercator</h3>
     <p>Az <strong>UTM</strong> (Univerzális Transzverzális Mercator) egy síkbeli vetületi koordináta-rendszer, amely a Föld felszínét 60, egyenként 6° hosszúságú zónára osztja a déli szélesség 80°-tól az északi szélesség 84°-ig. Minden zóna 8°-os szélességi sávokra oszlik, amelyeket C-től X-ig betűkkel jelölnek (az I és O betűk kimaradnak).</p>
     <h4>Zónák és sávok</h4>
     <p>A zónák számozása 1-től 60-ig tart, a nemzetközi dátumvonaltól (180°) kelet felé haladva. A szélességi sávok a déli 80°-nál kezdődnek (C) és az északi 84°-nál érnek véget (X). Budapest a <strong>34T</strong> zónában található.</p>
@@ -371,8 +370,21 @@
         <li>Nincsenek negatív koordináták.</li>
         <li>Méter alapú, könnyen számolható távolságok.</li>
     </ul>
-    <p>A KoordKonvert támogatja az UTM koordináták átváltását más formátumokba (pl. DD, DMS), offline is, így tökéletes választás földméréshez vagy navigációhoz.</p>
-
+    
+<h3>3) MGRS – Katonai Koordinátahálózati Rendszer</h3>
+    <p>Az <strong>MGRS</strong> (Military Grid Reference System) a NATO által használt koordináta-rendszer, amely az UTM vetületre épül, de egyedi jelölési rendszert alkalmaz. A Földet 6°-os UTM zónákra és 100×100 km-es négyzetekre osztja, lehetővé téve a pontos helymeghatározást méter alapú koordinátákkal.</p>
+    <h4>Zónák és négyzetek</h4>
+    <p>Az MGRS a 6°-os UTM zónákat (1–60) és 8°-os szélességi sávokat (C–X) használja, amelyeket zónaazonosítóval (pl. 34T) jelöl. Minden zónát 100×100 km-es négyzetekre osztanak, amelyeket két betű (A–Z, I és O nélkül) azonosít, például CT. Budapest a <strong>34TCT</strong> négyzetben található.</p>
+    <h4>Koordináták meghatározása</h4>
+    <p>Az MGRS koordináta három részből áll: zónaazonosító (pl. 34T), négyzetazonosító (pl. CT), és méter alapú eltolás a négyzet délnyugati sarkától (<em>keleti</em> és <em>északi</em>). A pontosság 1 m-től 10 km-ig terjed, attól függően, hány számjegyet használnak (2–10).</p>
+    <p>Példa: A magyar parlament pozíciója MGRS-ben: <em>34TCT6720037400</em>, ahol 34T a zóna, CT a négyzet, 67200 m a keleti, 37400 m az északi eltolás (1 m pontosság).</p>
+    <h4>Előnyei</h4>
+    <ul>
+        <li>Egyértelmű és gyors helymeghatározás térképen.</li>
+        <li>Méter alapú, könnyen olvasható koordináták.</li>
+        <li>NATO-standard, széles körben használt katonai és térinformatikai rendszerekben.</li>
+    </ul>
+    
     <h3>Miért érdemes a KoordKonvertet használni?</h3>
     <p>A KoordKonvert egyszerű, gyors és offline elérhető megoldást kínál a földrajzi és UTM koordináták kezelésére és átváltására. Különösen hasznos terepen, hálózati kapcsolat nélkül. Az OpenStreetMap és Google Maps integrációval térképes vizualizáció is elérhető.</p>
     <p><strong>Töltsd le most a KoordKonvertet, és válts át koordinátáidat bárhol, bármikor!</strong></p>
