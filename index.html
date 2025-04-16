@@ -324,103 +324,54 @@
 </div>
 
 
-
-<section id="foldrajzi-koordinata">
-  <h2>🌍 Földrajzi koordináta-rendszer</h2>
-  <p>A földrajzi koordináta-rendszer segítségével a Föld felszínén bármely pont pontosan meghatározható. Alapját két szögérték adja meg: a <strong>szélesség (φ)</strong> és a <strong>hosszúság (λ)</strong>. Ezek az Egyenlítő, illetve a Greenwichi kezdőmeridiánhoz viszonyított szögek.</p>
-
-  <h3>📍 Szélesség és hosszúság</h3>
-  <ul>
-    <li><strong>Szélesség (φ):</strong> az Egyenlítőhöz viszonyított szög. Északi irányban pozitív, déli irányban negatív.</li>
-    <li><strong>Hosszúság (λ):</strong> a Greenwichi meridiánhoz viszonyított szög. Keleti irányban pozitív, nyugati irányban negatív.</li>
-  </ul>
-  <p><strong>Példa:</strong><br>
-    <em>Lánchíd, Budapest:</em><br>
-    Szélesség: 47.498970°<br>
-    Hosszúság: 19.043604°
-  </p>
-
-  <h3>🌐 Koordináták formátumai</h3>
-  <ul>
-    <li><strong>DD (Decimal Degrees):</strong> 47.49897°, 19.04360°</li>
-    <li><strong>DDM (Degrees Decimal Minutes):</strong> 47° 29.938′, 19° 2.616′</li>
-    <li><strong>DMS (Degrees Minutes Seconds):</strong> 47° 29′ 56″, 19° 2′ 37″</li>
-  </ul>
-  <p><strong>Átváltás DMS → DD:</strong><br>
-    <code>DD = fok + (perc / 60) + (másodperc / 3600)</code>
-  </p>
-
-  <h3>🌎 A Föld formája és alapfelületek</h3>
-  <p>A Föld nem tökéletes gömb, hanem lapult ellipszoid. A helymeghatározás pontosságát javítják a különféle <strong>geodéziai dátumok</strong>:</p>
-  <ul>
-    <li><strong>WGS84:</strong> globális GPS rendszer</li>
-    <li><strong>NAD83:</strong> Észak-Amerikában</li>
-    <li><strong>HD72:</strong> Magyarországon (pl. EOV rendszer)</li>
-  </ul>
-
-  <h3>🧭 Harmadik dimenzió: magasság</h3>
-  <p>A pont helyzetét a felszín alatt vagy felett a <strong>magasság</strong> adja meg. Ezt általában a tengerszinthez vagy a geoidhoz viszonyítják.</p>
-
-  <h3>📡 Geostacionárius műholdak és polárkoordináták</h3>
-  <p>A műholdak az Egyenlítő fölött helyezkednek el, pozíciójuk hosszúsági fokkal adható meg. A (φ, λ, r) polárkoordináta-rendszerben a <code>r = R + h</code>, ahol R a Föld sugara, h pedig a magasság.</p>
-
-  <h3>⏳ Történeti áttekintés</h3>
-  <p>A földrajzi koordináták története az ókori görög tudósokig nyúlik vissza. <strong>Hipparkhosz</strong> és <strong>Ptolemaiosz</strong> már használták, de a hosszúsági fok pontos meghatározását <strong>John Harrison</strong> kronométere tette lehetővé a 18. században.</p>
-</section>
-
 <!-- Hungarian Coordinate Systems Dropdown -->
 <button class="accordion">
-  <img src="images/hun_flag.png" alt="Magyar zászló" width="60" height="40">
-  Koordináta-rendszerek átváltása offline
+    <img src="images/hun_flag.png" alt="Magyar zászló" width="60" height="40">
+    Koordináta-rendszerek átváltása offline
 </button>
 <div class="accordion-content" lang="hu">
-  <p class="last-updated">Utolsó frissítés: 2025. április 16.</p>
-  <h2>Koordináta-rendszerek átváltása offline</h2>
-  <p>A <strong>KoordKonvert</strong> alkalmazás különféle koordináta-rendszerek közötti offline átváltásra kínál lehetőséget. Hasznos földmérők, túrázók, katonák, mentők, természetvédők és GIS-szakemberek számára.</p>
+    <p class="last-updated">Utolsó frissítés: 2025. április 16.</p>
+    <h2>Koordináta-rendszerek átváltása offline</h2>
+    <p>A <strong>KoordKonvert</strong> alkalmazás lehetőséget biztosít különféle koordináta-rendszerek közötti offline átváltásra. A földmérők, túrázók, katonák, mentők, természetvédők és térinformatikusok számára nélkülözhetetlen eszköz, ha internetkapcsolat nélküli, mégis precíz helymeghatározásra van szükség. A támogatott rendszerek:</p>
+    <ul>
+        <li><strong>DD</strong> – Decimal Degrees</li>
+        <li><strong>DDM</strong> – Degrees Decimal Minutes</li>
+        <li><strong>DMS</strong> – Degrees Minutes Seconds</li>
+        <li><strong>UTM</strong> – Universal Transverse Mercator</li>
+        <li><strong>MGRS</strong> – Military Grid Reference System</li>
+        <li><strong>EOV</strong> – Egységes Országos Vetület</li>
+    </ul>
 
-  <h3>Támogatott rendszerek:</h3>
-  <ul>
-    <li><strong>DD</strong> – Decimal Degrees</li>
-    <li><strong>DDM</strong> – Degrees Decimal Minutes</li>
-    <li><strong>DMS</strong> – Degrees Minutes Seconds</li>
-    <li><strong>UTM</strong> – Universal Transverse Mercator</li>
-    <li><strong>MGRS</strong> – Military Grid Reference System</li>
-    <li><strong>EOV</strong> – Egységes Országos Vetület</li>
-  </ul>
+    <h3>1. Földrajzi koordináta-rendszer (geodéziai vagy gömbi)</h3>
+    <p>A földrajzi koordináták a Földön egy pont elhelyezkedését a gömbi rendszerben adják meg, a <strong>szélesség (φ)</strong> és a <strong>hosszúság (λ)</strong> szögei alapján, fokban mérve. Alapja általában a <strong>WGS84</strong> referenciaellipszoid. A rendszer az egyenlítőhöz és a greenwichi kezdőmeridiánhoz képest számol, például: <em>47.49897°, 19.04360°</em>.</p>
+    <p>A megadás formátumai:</p>
+    <ul>
+        <li><strong>DD:</strong> 47.49897°, 19.04360°</li>
+        <li><strong>DDM:</strong> 47° 29.938′, 19° 2.616′</li>
+        <li><strong>DMS:</strong> 47° 29′ 56″, 19° 2′ 37″</li>
+    </ul>
 
-  <h3>1. Földrajzi koordináták (WGS84 alapú)</h3>
-  <p>Példa formátumok:</p>
-  <ul>
-    <li><strong>DD:</strong> 47.49897°, 19.04360°</li>
-    <li><strong>DDM:</strong> 47° 29.938′, 19° 2.616′</li>
-    <li><strong>DMS:</strong> 47° 29′ 56″, 19° 2′ 37″</li>
-  </ul>
+    <h3>2. UTM – Universal Transverse Mercator</h3>
+    <p>Az UTM egy síkbeli vetületi rendszer, amely a Földet 60, egyenként 6° szélességű zónára osztja. A Transzverzális Mercator-vetület biztosítja a minimális torzítást. A koordináták méterben vannak megadva, a zóna középmeridiánjától (easting) és az Egyenlítőtől (northing) mért távolság szerint. A déli féltekén a northing értéket 10 000 000 m-rel növelik, hogy elkerüljék a negatív számokat.</p>
+    <p><strong>Példa:</strong> 34T 352920 m E, 5263357 m N (Magyar Parlament)</p>
 
-  <h3>2. UTM – Universal Transverse Mercator</h3>
-  <p>A Föld 60 zónára van osztva. A koordináták méterben vannak megadva a zóna középmeridiánjától és az Egyenlítőtől mért távolság szerint.</p>
-  <p><strong>Példa:</strong> 34T 352920 m E, 5263357 m N</p>
+    <h3>3. MGRS – Military Grid Reference System</h3>
+    <p>Az MGRS az UTM zónákon alapuló, rácsalapú katonai helyazonosító rendszer. A zónák 100×100 km-es négyzetekre osztódnak, amelyek két betűvel vannak jelölve (pl. CT), ezt követik a finomabb méter alapú koordináták. Egy MGRS kód így néz ki: <em>34TCT6720037400</em>, ahol a számok a keleti és északi eltolást jelentik méterben.</p>
+    <p>Katonai jelentésekben, GPS eszközökben, NATO-térképeken szabványosított. Az MGRS előnye a gyors olvashatóság és az egyértelmű térbeli azonosítás.</p>
 
-  <h3>3. MGRS – Military Grid Reference System</h3>
-  <p>Az UTM-alapú rendszer katonai célokra. Egy tipikus kód: <code>34TCT6720037400</code>.</p>
+    <h3>4. EOV – Egységes Országos Vetület</h3>
+    <p>Az EOV a hivatalos magyar vetületi rendszer, melyet a HD72 dátum alapján hoztak létre. Ferdetengelyű, szögtartó vetület az IUGG67 ellipszoidra illesztve. Az X tengely az észak, az Y a kelet irányt jelenti, és a koordinátákhoz mesterséges eltolás tartozik (X: +200 000 m, Y: +650 000 m), hogy minden pont pozitív tartományba essen.</p>
+    <p><strong>Példa:</strong> 200000 X, 650000 Y</p>
+    <p>A rendszer támogatja a WGS84/ETRS89 konverziót, amelyet az <strong>MSZ 7222:2002</strong> szabvány ír le. A térinformatikai rendszerekben <strong>SRID: 23700</strong> azonosítóval szerepel.</p>
 
-  <h3>4. EOV – Egységes Országos Vetület</h3>
-  <p>Magyarország hivatalos vetületi rendszere (HD72 alapú). Az X tengely észak, az Y kelet felé mutat.</p>
-  <p><strong>Példa:</strong> 200000 X, 650000 Y</p>
-  <p>GIS rendszerekben: <code>SRID: 23700</code></p>
+    <h3>Miért érdemes a KoordKonvertet használni?</h3>
+    <p>A KoordKonvert egyszerű, gyors és offline elérhető megoldást kínál többféle nemzetközi és hazai koordináta-rendszer kezelésére. Különösen hasznos, ha terepen vagyunk, távol a hálózattól. Az OpenStreetMap és a Google Maps integráció segítségével térképes vizualizáció is elérhető.</p>
 
-  <h3>🎯 Miért hasznos a KoordKonvert?</h3>
-  <ul>
-    <li>Offline, gyors és egyszerű</li>
-    <li>Integráció OpenStreetMap és Google Maps rendszerekkel</li>
-    <li>Különféle nemzetközi és hazai szabvány támogatása</li>
-  </ul>
-  <p><strong>Töltsd le most a KoordKonvertet, és válts át koordinátáidat bárhol, bármikor!</strong></p>
-  <p><strong>Kapcsolat:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
-  <p><a href="privacy-policy.html">Adatvédelmi tájékoztató - kattints ide</a></p>
+    <p><strong>Töltsd le most a KoordKonvertet, és válts át koordinátáidat bárhol, bármikor!</strong></p>
+    <p><strong>Kapcsolat:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
+    <p><a href="privacy-policy.html">Adatvédelmi tájékoztató - kattints ide</a></p>
 </div>
-
-
-        
+  
         <p>
             <a href="https://play.google.com/store/apps/details?id=com.flori.koordkonvert">Google Play Store</a>
         </p>
