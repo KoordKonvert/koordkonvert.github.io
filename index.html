@@ -325,53 +325,47 @@
 
 
 <!-- Hungarian Coordinate Systems Dropdown -->
-<button class="accordion">
-    <img src="images/hun_flag.png" alt="Magyar zászló" width="60" height="40">
-    Koordináta-rendszerek átváltása offline
-</button>
-<div class="accordion-content" lang="hu">
-    <p class="last-updated">Utolsó frissítés: 2025. április 16.</p>
-    <h2>Koordináta-rendszerek átváltása offline</h2>
-    <p>A <strong>KoordKonvert</strong> alkalmazás lehetőséget biztosít különféle koordináta-rendszerek közötti offline átváltásra. A földmérők, túrázók, katonák, mentők, természetvédők és térinformatikusok számára nélkülözhetetlen eszköz, ha internetkapcsolat nélküli, mégis precíz helymeghatározásra van szükség. A támogatott rendszerek:</p>
-    <ul>
-        <li><strong>DD</strong> – Decimal Degrees</li>
-        <li><strong>DDM</strong> – Degrees Decimal Minutes</li>
-        <li><strong>DMS</strong> – Degrees Minutes Seconds</li>
-        <li><strong>UTM</strong> – Universal Transverse Mercator</li>
-        <li><strong>MGRS</strong> – Military Grid Reference System</li>
-        <li><strong>EOV</strong> – Egységes Országos Vetület</li>
-    </ul>
+        <button class="accordion">
+            <img src="images/hun_flag.png" alt="Magyar zászló" width="60" height="40">
+            Koordináta-rendszerek átváltása offline
+        </button>
+        <div class="accordion-content" lang="hu">
+            <p class="last-updated">Utolsó frissítés: 2025. április 16.</p>
+            <h2>Koordináta-rendszerek átváltása offline</h2>
+            <p>A <strong>KoordKonvert</strong> alkalmazás lehetőséget biztosít különféle koordináta-rendszerek közötti offline átváltásra. A földmérők, túrázók, katonák, mentők, természetvédők és térinformatikusok számára nélkülözhetetlen eszköz, ha internetkapcsolat nélküli, mégis precíz helymeghatározásra van szükség. A támogatott rendszerek:</p>
+            <ul>
+                <li><strong>DD</strong> – Decimal Degrees</li>
+                <li><strong>DDM</strong> – Degrees Decimal Minutes</li>
+                <li><strong>DMS</strong> – Degrees Minutes Seconds</li>
+                <li><strong>UTM</strong> – Universal Transverse Mercator</li>
+                <li><strong>MGRS</strong> – Military Grid Reference System</li>
+                <li><strong>EOV</strong> – Egységes Országos Vetület</li>
+            </ul>
 
-    <h3>1. Földrajzi koordináta-rendszer (geodéziai vagy gömbi)</h3>
-    <p>A földrajzi koordináták a Földön egy pont elhelyezkedését a gömbi rendszerben adják meg, a <strong>szélesség (φ)</strong> és a <strong>hosszúság (λ)</strong> szögei alapján, fokban mérve. Alapja általában a <strong>WGS84</strong> referenciaellipszoid. A rendszer az egyenlítőhöz és a greenwichi kezdőmeridiánhoz képest számol, például: <em>47.49897°, 19.04360°</em>.</p>
-    <p>A megadás formátumai:</p>
-    <ul>
-        <li><strong>DD:</strong> 47.49897°, 19.04360°</li>
-        <li><strong>DDM:</strong> 47° 29.938′, 19° 2.616′</li>
-        <li><strong>DMS:</strong> 47° 29′ 56″, 19° 2′ 37″</li>
-    </ul>
+            <h3>Földrajzi koordináta-rendszer (geodéziai vagy gömbi)</h3>
+            <p>A földrajzi koordináta-rendszer a Föld felszínén egy pont helyét a <strong>szélesség (φ)</strong> és a <strong>hosszúság (λ)</strong> szögeivel határozza meg, fokban mérve. Alapja általában a <strong>WGS84</strong> referenciaellipszoid. A rendszer az Egyenlítőhöz és a greenwichi kezdőmeridiánhoz viszonyít.</p>
+            <h4>Földrajzi szélesség (φ)</h4>
+            <p>A szélesség a Föld középpontja és a pont közötti egyenes, valamint az Egyenlítő síkja által bezárt szög. Értéktartománya 0° (Egyenlítő) és ±90° (Északi-sark: +90°, Déli-sark: -90°). Északi irány pozitív (N), déli irány negatív (S). Az azonos szélességű pontok <strong>szélességi köröket</strong> alkotnak, amelyek az Egyenlítővel párhuzamosak.</p>
+            <h4>Földrajzi hosszúság (λ)</h4>
+            <p>A hosszúság a pont meridiánsíkjának a greenwichi kezdőmeridián síkjával bezárt szöge. Értéktartománya 0° és ±180°. Keleti irány pozitív (E), nyugati irány negatív (W). Az azonos hosszúságú pontok <strong>meridiánokat</strong> alkotnak, amelyek a pólusokon találkoznak.</p>
+            <h4>Megadás formátumai</h4>
+            <p>A koordináták különböző formátumokban adhatók meg:</p>
+            <ul>
+                <li><strong>DD (Decimal Degrees):</strong> Tizedes fok, pl. 47.49897°, 19.04360°</li>
+                <li><strong>DDM (Degrees Decimal Minutes):</strong> Fok és tizedes perc, pl. 47° 29.938′, 19° 2.616′</li>
+                <li><strong>DMS (Degrees Minutes Seconds):</strong> Fok, perc, másodperc, pl. 47° 29′ 56″, 19° 2′ 37″</li>
+            </ul>
+            <p>Példa: A budapesti Lánchíd középpontja <em>é. sz. 47° 29′ 56″, k. h. 19° 02′ 37″</em> (DMS), vagy <em>47.49897°, 19.04360°</em> (DD).</p>
+            <p>A KoordKonvert lehetővé teszi a földrajzi koordináták gyors átváltását DD, DDM és DMS formátumok között, offline is, így ideális terepi használatra.</p>
 
-    <h3>2. UTM – Universal Transverse Mercator</h3>
-    <p>Az UTM egy síkbeli vetületi rendszer, amely a Földet 60, egyenként 6° szélességű zónára osztja. A Transzverzális Mercator-vetület biztosítja a minimális torzítást. A koordináták méterben vannak megadva, a zóna középmeridiánjától (easting) és az Egyenlítőtől (northing) mért távolság szerint. A déli féltekén a northing értéket 10 000 000 m-rel növelik, hogy elkerüljék a negatív számokat.</p>
-    <p><strong>Példa:</strong> 34T 352920 m E, 5263357 m N (Magyar Parlament)</p>
+            <h3>Miért érdemes a KoordKonvertet használni?</h3>
+            <p>A KoordKonvert egyszerű, gyors és offline elérhető megoldást kínál a földrajzi koordináták kezelésére és átváltására. Különösen hasznos terepen, hálózati kapcsolat nélkül. Az OpenStreetMap és Google Maps integrációval térképes vizualizáció is elérhető.</p>
+            <p><strong>Töltsd le most a KoordKonvertet, és válts át koordinátáidat bárhol, bármikor!</strong></p>
+            <p><strong>Kapcsolat:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
+            <p><a href="privacy-policy.html">Adatvédelmi tájékoztató - kattints ide</a></p>
+        </div>
 
-    <h3>3. MGRS – Military Grid Reference System</h3>
-    <p>Az MGRS az UTM zónákon alapuló, rácsalapú katonai helyazonosító rendszer. A zónák 100×100 km-es négyzetekre osztódnak, amelyek két betűvel vannak jelölve (pl. CT), ezt követik a finomabb méter alapú koordináták. Egy MGRS kód így néz ki: <em>34TCT6720037400</em>, ahol a számok a keleti és északi eltolást jelentik méterben.</p>
-    <p>Katonai jelentésekben, GPS eszközökben, NATO-térképeken szabványosított. Az MGRS előnye a gyors olvashatóság és az egyértelmű térbeli azonosítás.</p>
-
-    <h3>4. EOV – Egységes Országos Vetület</h3>
-    <p>Az EOV a hivatalos magyar vetületi rendszer, melyet a HD72 dátum alapján hoztak létre. Ferdetengelyű, szögtartó vetület az IUGG67 ellipszoidra illesztve. Az X tengely az észak, az Y a kelet irányt jelenti, és a koordinátákhoz mesterséges eltolás tartozik (X: +200 000 m, Y: +650 000 m), hogy minden pont pozitív tartományba essen.</p>
-    <p><strong>Példa:</strong> 200000 X, 650000 Y</p>
-    <p>A rendszer támogatja a WGS84/ETRS89 konverziót, amelyet az <strong>MSZ 7222:2002</strong> szabvány ír le. A térinformatikai rendszerekben <strong>SRID: 23700</strong> azonosítóval szerepel.</p>
-
-    <h3>Miért érdemes a KoordKonvertet használni?</h3>
-    <p>A KoordKonvert egyszerű, gyors és offline elérhető megoldást kínál többféle nemzetközi és hazai koordináta-rendszer kezelésére. Különösen hasznos, ha terepen vagyunk, távol a hálózattól. Az OpenStreetMap és a Google Maps integráció segítségével térképes vizualizáció is elérhető.</p>
-
-    <p><strong>Töltsd le most a KoordKonvertet, és válts át koordinátáidat bárhol, bármikor!</strong></p>
-    <p><strong>Kapcsolat:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
-    <p><a href="privacy-policy.html">Adatvédelmi tájékoztató - kattints ide</a></p>
-</div>
-  
+        
         <p>
             <a href="https://play.google.com/store/apps/details?id=com.flori.koordkonvert">Google Play Store</a>
         </p>
