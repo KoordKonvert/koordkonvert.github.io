@@ -76,9 +76,10 @@
         a:hover {
             text-decoration: underline;
         }
-        /* Google Play Store link stílusa */
+    /* Google Play Store link stílusa */
         .google-play-link {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             background-color: #008080;
             color: white;
             padding: 12px 20px;
@@ -89,6 +90,11 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
+        .google-play-link img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
         .google-play-link:hover {
             background-color: #006666;
             text-decoration: none;
@@ -97,6 +103,8 @@
             margin-top: 30px;
             padding: 0 15px;
         }
+
+        
         /* Legördülő menü stílusa */
         .accordion {
             background-color: rgba(0, 128, 128, 0.5);
@@ -230,10 +238,12 @@
         <h1>KoordKonvert</h1>
     </header>
     <div class="container">
-        <!-- Google Play Store link -->
-        <p>
-            <a href="https://play.google.com/store/apps/details?id=com.flori.koordkonvert" class="google-play-link">Google Play Store</a>
-        </p>
+      <!-- Google Play Store link -->
+<p>
+    <a href="https://play.google.com/store/apps/details?id=com.flori.koordkonvert" class="google-play-link">
+        <img src="images/google_play_icon.png" alt="Google Play Store ikon"> Google Play Store
+    </a>
+</p>
 
         <!-- Angol legördülő menü -->
         <button class="accordion">
