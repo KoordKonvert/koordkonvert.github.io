@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoordKonvert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        /* Fejléc stílusa */
+        header {
+            width: 100%;
+            height: 250px;
+            background-image: url('images/header_globe.jpg');
+            background-size: cover;
+            background-position: 50% 15%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Logó stílusa */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .logo img {
+            max-width: 50px;
+            height: auto;
+        }
+        /* Fejléc címe */
+        header h1 {
+            color: white;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 10px;
+            font-size: 1em;
+        }
+        /* Last Updated kisebb betűméret */
+        .last-updated {
+            font-size: 0.8em;
+        }
+        /* Linkek stílusa */
+        .container p a {
+            padding: 8px 12px;
+            display: inline-block;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            margin-top: 30px;
+            padding: 0 15px;
+        }
+        /* Legördülő menü stílusa */
+        .accordion {
+            background-color: rgba(0, 128, 128, 0.5);
+            color: white;
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 10px auto; /* Kis margó a menük között */
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.4em;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .accordion img {
+            width: 60px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .accordion:hover {
+            background-color: rgba(0, 128, 128, 0.7);
+        }
+        /* Nyíl a legördülő menühöz */
+        .accordion::after {
+            content: '▼';
+            position: absolute;
+            right: 15px;
+            font-size: 1em;
+            color: white;
+        }
+        .accordion.active::after {
+            content: '▲';
+        }
+        .accordion-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .accordion-content p {
+            margin: 10px 0;
+        }
+        /* Mobilbarát stílusok (600px alatti képernyőméretekre) */
+        @media (max-width: 600px) {
+            header {
+                height: 150px;
+            }
+            .logo img {
+                max-width: 35px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 0.9em;
+                max-width: 90%;
+            }
+            .container {
+                margin-top: 20px;
+            }
+            .container p a {
+                padding: 6px 10px;
+            }
+            .accordion {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+            .accordion img {
+                width: 55px;
+            }
+            .accordion::after {
+                font-size: 0.9em;
+                right: 10px;
+            }
+        }
+        /* Extra kicsi képernyőkre (400px alatt) */
+        @media (max-width: 400px) {
+            header {
+                height: 120px;
+            }
+            .logo img {
+                max-width: 30px;
+            }
+            header h1 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://koordkonvert.github.io/koordkonvert/" class="logo">
+            <img src="images/koordkonvert_logo1.png" alt="Koordkonvert logó">
+        </a>
+        <h1>KoordKonvert</h1>
+    </header>
+    <div class="container">
+        <!-- Angol legördülő menü -->
+        <button class="accordion">
+            <img src="images/eng_us_flag.png" alt="English flag">
+            KoordKonvert - eng
+        </button>
+        <div class="accordion-content">
+            <p class="last-updated">Last Updated: March 20, 2025</p>
+            <p><strong>KoordKonvert - Your Ultimate Coordinate Conversion Tool</strong></p>
+            <p>Easily convert between coordinate formats and visualize them on a map with KoordKonvert. Whether you're a hiker, surveyor, military personnel or geospatial enthusiast, this app simplifies working with coordinates like Decimal Degrees (DD), Decimal Degrees Minutes (DDM), Degrees Minutes Seconds (DMS), UTM (Universal Transverse Mercator), MGRS (Military Grid Reference System), and even regional systems like EOV (Hungary) - and more is coming soon.</p>
+
+            <p><strong>Key Features:</strong></p>
+            <p><strong>Coordinate Conversion:</strong> Transform coordinates between DD, DDM, DMS, UTM, MGRS, and EOV with precision and OFFLINE.</p>
+            <p><strong>Interactive Maps:</strong> View your coordinates on OpenStreetMap or unlock Google Maps (Normal, Satellite, Hybrid, Terrain) for detailed visualization.</p>
+            <p><strong>Get Your Location:</strong> Use GPS to input your current coordinates instantly.</p>
+            <p><strong>Save & Manage:</strong> Store your favorite coordinates with timestamps or custom names for quick access.</p>
+            <p><strong>Copy & Share:</strong> Copy converted coordinates to your clipboard with one tap.</p>
+            <p><strong>Multilingual Support:</strong> Available in English, Hungarian, German, Spanish, Polish, and Italian.</p>
+            <p><strong>Customizable Settings:</strong> Toggle input assistant, regional systems, map types, and keep-screen-on options.</p>
+            <p><strong>Ad-Free Option:</strong> Upgrade to remove ads and unlock Google Maps permanently.</p>
+
+            <p><strong>How It Works:</strong></p>
+            <p>1. Enter or fetch your coordinates using GPS.</p>
+            <p>2. Select input and output formats from the dropdowns.</p>
+            <p>3. Convert and view results instantly—or show them on a map!</p>
+            <p>4. Copy or save your coordinates for later use.</p>
+
+            <p>Perfect for outdoor adventures, professional surveying, or educational purposes. KoordKonvert adapts to your needs with a clean interface and powerful features.</p>
+
+            <p><strong>Why Choose KoordKonvert?</strong></p>
+            <p>Supports multiple coordinate systems, including regional EOV for Hungary - more coming soon.</p>
+            <p>Seamless map integration with OpenStreetMap and optional Google Maps.</p>
+            <p>Offline-ready, with saved coordinates and lightweight design.</p>
+
+            <p><strong>Go Ad-Free!</strong></p>
+            <p>Remove ads and unlock premium features like Google Maps with a one-time purchase—or watch a short ad to unlock Google Maps for an hour.</p>
+
+            <p><strong>Download KoordKonvert now and take control of your coordinates!</strong></p>
+            <p><strong>Note:</strong> Location permissions are required for GPS functionality. Your data stays private and secure.</p>
+
+            <p><strong>Contact:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
+            <p><a href="privacy-policy.html">Privacy Policy - click here</a></p>
+        </div>
+
+        <!-- Magyar legördülő menü -->
+        <button class="accordion">
+            <img src="images/hun_flag.png" alt="Hungarian flag">
+            KoordKonvert - hun
+        </button>
+        <div class="accordion-content">
+            <p class="last-updated">Utolsó frissítés: 2025. március 20.</p>
+            <p><strong>KoordKonvert - A koordináta-átváltó app</strong></p>
+            <p>A KoordKonvert segítségével egyszerűen válthatod át a különböző koordinátaformátumokat, és térképen is megjelenítheted őket. Legyél túrázó, földmérő, katona, rendőr vagy erdész, ez az alkalmazás megkönnyíti a koordináták kezelését, például a fok (DD), fok-szögperc (DDM), fok-szögperc-szögmásodperc (DMS), UTM, MGRS, valamint regionális rendszerek, mint az EOV (Egységes Országos Vetület) használatát – és hamarosan még több formátum érkezik!</p>
+
+            <p><strong>Főbb jellemzők:</strong></p>
+            <p><strong>Koordináta-átváltás:</strong> Válts pontosan és OFFLINE koordinátákat DD, DDM, DMS, UTM, MGRS és EOV formátumok között.</p>
+            <p><strong>Interaktív térképek:</strong> Nézd meg koordinátáidat az OpenStreetMap-en, vagy oldd fel a Google Térképet (Normál, Műholdas, Hibrid, Terep) a részletes megjelenítéshez.</p>
+            <p><strong>Helymeghatározás:</strong> Használd a GPS-t, hogy azonnal megkapd aktuális koordinátáidat.</p>
+            <p><strong>Mentés és kezelés:</strong> Tárold kedvenc koordinátáidat időbélyeggel vagy egyedi nevekkel a gyors hozzáféréshez.</p>
+            <p><strong>Másolás és megosztás:</strong> Egy koppintással másold a konvertált koordinátákat a vágólapra.</p>
+            <p><strong>Többnyelvű támogatás:</strong> Elérhető angol, magyar, német, spanyol, lengyel és olasz nyelven.</p>
+            <p><strong>Testreszabható beállítások:</strong> Kapcsold be/ki a beviteli asszisztenst, a regionális rendszereket, a térkép típusokat és a képernyő mindig aktív módját.</p>
+            <p><strong>Hirdetésmentes opció:</strong> Frissíts, hogy eltávolítsd a hirdetéseket és véglegesen feloldd a Google Térképet.</p>
+
+            <p><strong>Hogyan működik?</strong></p>
+            <p>1. Add meg vagy kérd le koordinátáidat GPS segítségével.</p>
+            <p>2. Válaszd ki a bemeneti és kimeneti formátumokat a legördülő menüből.</p>
+            <p>3. Konvertáld és lásd az eredményeket azonnal – vagy jelenítsd meg őket térképen!</p>
+            <p>4. Másold vagy mentsd el a koordinátákat későbbi használatra.</p>
+
+            <p>Tökéletes szabadtéri kalandokhoz, professzionális földméréshez vagy oktatási célokra. A KoordKonvert letisztult felülettel és erőteljes funkciókkal alkalmazkodik az igényeidhez.</p>
+
+            <p><strong>Miért a KoordKonvert?</strong></p>
+            <p>Többféle koordináta-rendszer támogatás, köztük a magyar EOV-t – hamarosan még több érkezik.</p>
+            <p>Zökkenőmentes térképintegráció az OpenStreetMap-pel és opcionálisan a Google Térképpel.</p>
+            <p>Offline használatra kész, menthető koordinátákkal és könnyű dizájnnal.</p>
+
+            <p><strong>Hirdetésmentes élmény!</strong></p>
+            <p>Távolítsd el a hirdetéseket és oldd fel a prémium funkciókat, például a Google Térképet egy egyszeri vásárlással – vagy nézz meg egy rövid hirdetést, hogy egy órára feloldd a Google Térképet.</p>
+
+            <p><strong>Töltsd le a KoordKonvertet most, és vedd kezedbe a koordinátáidat!</strong></p>
+            <p><strong>Megjegyzés:</strong> A GPS funkcióhoz helymeghatározási engedély szükséges. Adataid biztonságban és privát módon vannak kezelve.</p>
+
+            <p><strong>Kapcsolat:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
+            <p><a href="privacy-policy.html">Adatvédelmi tájékoztató - kattints ide</a></p>
+        </div>
+        <p>
+            <a href="https://play.google.com/store/apps/details?id=com.flori.koordkonvert">Google Play Store</a>
+        </p>
+    </div>
+
+    <script>
+        // Legördülő menük működése
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', () => {
+                const content = accordion.nextElementSibling;
+                const isOpen = content.style.maxHeight;
+
+                if (isOpen) {
+                    content.style.maxHeight = null;
+                    accordion.classList.remove('active');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    accordion.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
