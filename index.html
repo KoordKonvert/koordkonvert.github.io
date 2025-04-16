@@ -323,7 +323,6 @@
     <p><a href="privacy-policy.html">Privacy Policy - click here</a></p>
 </div>
 
-
 <!-- Hungarian Coordinate Systems Dropdown -->
 <button class="accordion">
     <img src="images/hun_flag.png" alt="Magyar zászló" width="60" height="40">
@@ -337,8 +336,8 @@
         <li><strong>DD</strong> – Tizedes fok</li>
         <li><strong>DDM</strong> – Fok, Tizedes szögperc</li>
         <li><strong>DMS</strong> – Fok, Szögperc, Szögmásodperc</li>
-        <li><strong>UTM</strong> – Universal Transverse Mercator</li>
-        <li><strong>MGRS</strong> – Military Grid Reference System</li>
+        <li><strong>UTM</strong> – Univerzális Transzverzális Mercator</li>
+        <li><strong>MGRS</strong> – Katonai Koordinátahálózati Rendszer</li>
         <li><strong>EOV</strong> – Egységes Országos Vetület</li>
     </ul>
 
@@ -351,13 +350,13 @@
     <h4>Megadás formátumai</h4>
     <p>A koordináták különböző formátumokban adhatók meg:</p>
     <ul>
-        <li><strong>DD (Decimal Degrees):</strong> Tizedes fok, pl. 47.49897°, 19.04360°</li>
-        <li><strong>DDM (Degrees Decimal Minutes):</strong> Fok és tizedes szögperc, pl. 47° 29.938′, 19° 2.616′</li>
-        <li><strong>DMS (Degrees Minutes Seconds):</strong> Fok, szögperc, szögmásodperc, pl. 47° 29′ 56″, 19° 2′ 37″</li>
+        <li><strong>DD (Tizedes fok):</strong> Tizedes fok, pl. 47.49897°, 19.04360°</li>
+        <li><strong>DDM (Fok, Tizedes szögperc):</strong> Fok és tizedes szögperc, pl. 47° 29.938′, 19° 2.616′</li>
+        <li><strong>DMS (Fok, Szögperc, Szögmásodperc):</strong> Fok, szögperc, szögmásodperc, pl. 47° 29′ 56″, 19° 2′ 37″</li>
     </ul>
     <p>Példa: A budapesti Lánchíd középpontja <em>é. sz. 47° 29′ 56″, k. h. 19° 02′ 37″</em> (DMS), vagy <em>47.49897°, 19.04360°</em> (DD).</p>
 
-    <h3>2) UTM – Universal Transverse Mercator (univerzális transzverzális Mercator)</h3>
+    <h3>2) UTM – Univerzális Transzverzális Mercator</h3>
     <p>Az <strong>UTM</strong> (Univerzális Transzverzális Mercator) egy síkbeli vetületi koordináta-rendszer, amely a Föld felszínét 60, egyenként 6° hosszúságú zónára osztja a déli szélesség 80°-tól az északi szélesség 84°-ig. Minden zóna 8°-os szélességi sávokra oszlik, amelyeket C-től X-ig betűkkel jelölnek (az I és O betűk kimaradnak).</p>
     <h4>Zónák és sávok</h4>
     <p>A zónák számozása 1-től 60-ig tart, a nemzetközi dátumvonaltól (180°) kelet felé haladva. A szélességi sávok a déli 80°-nál kezdődnek (C) és az északi 84°-nál érnek véget (X). Budapest a <strong>34T</strong> zónában található.</p>
@@ -370,14 +369,25 @@
         <li>Nincsenek negatív koordináták.</li>
         <li>Méter alapú, könnyen számolható távolságok.</li>
     </ul>
-    
-<h3>3) MGRS – Military Grid Reference System (Katonai Koordinátahálózati Rendszer)</h3>
-    <p>Az <strong>MGRS</strong> (Military Grid Reference System) a NATO által használt koordináta-rendszer, amely az UTM vetületre épül, de egyedi jelölési rendszert alkalmaz. A Földet 6°-os UTM zónákra és 100×100 km-es négyzetekre osztja, lehetővé téve a pontos helymeghatározást méter alapú koordinátákkal.</p>
+
+    <h3>3) MGRS – Katonai Koordinátahálózati Rendszer</h3>
+    <p>Az <strong>MGRS</strong> (Katonai Koordinátahálózati Rendszer) a NATO által használt koordináta-rendszer, amely az UTM vetületre épül, de egyedi jelölési rendszert alkalmaz. A Földet 6°-os UTM zónákra és 100×100 km-es négyzetekre osztja, lehetővé téve a pontos helymeghatározást méter alapú koordinátákkal.</p>
     <h4>Zónák és négyzetek</h4>
     <p>Az MGRS a 6°-os UTM zónákat (1–60) és 8°-os szélességi sávokat (C–X) használja, amelyeket zónaazonosítóval (pl. 34T) jelöl. Minden zónát 100×100 km-es négyzetekre osztanak, amelyeket két betű (A–Z, I és O nélkül) azonosít, például CT. Budapest a <strong>34TCT</strong> négyzetben található.</p>
     <h4>Koordináták meghatározása</h4>
-    <p>Az MGRS koordináta három részből áll: zónaazonosító (pl. 34T), négyzetazonosító (pl. CT), és méter alapú eltolás a négyzet délnyugati sarkától (<em>keleti</em> és <em>északi</em>). A pontosság 1 m-től 10 km-ig terjed, attól függően, hány számjegyet használnak (2–10).</p>
+    <p>Az MGRS koordináta három részből áll: zónaazonosító (pl. 34T), négyzetazonosító (pl. CT), és méter alapú eltolás a négyzet délnyugati sarkától (<em>keleti</em> és <em>északi</em>). A pontosság 1 m-től 10 km-ig terjed, attól függően, hány számjegyet használnak.</p>
     <p>Példa: A magyar parlament pozíciója MGRS-ben: <em>34TCT6720037400</em>, ahol 34T a zóna, CT a négyzet, 67200 m a keleti, 37400 m az északi eltolás (1 m pontosság).</p>
+    <p>A pontosság a számjegyek számától függ, az alábbiak szerint:</p>
+    <ul>
+        <li><strong>34T</strong> – csak zónaazonosító, kb. 600×800 km-es terület</li>
+        <li><strong>34TCT</strong> – zóna és 100 km-es négyzet, 100 km-es pontosság</li>
+        <li><strong>34TCT67</strong> – 10 km-es pontosság</li>
+        <li><strong>34TCT67237</strong> – 1 km-es pontosság</li>
+        <li><strong>34TCT67203740</strong> – 100 m-es pontosság</li>
+        <li><strong>34TCT672003740</strong> – 10 m-es pontosság</li>
+        <li><strong>34TCT6720037400</strong> – 1 m-es pontosság</li>
+    </ul>
+
     <h4>Előnyei</h4>
     <ul>
         <li>Egyértelmű és gyors helymeghatározás térképen.</li>
@@ -398,9 +408,9 @@
         <li>Méter alapú, pontos térképészeti mérésekhez.</li>
         <li>Széles körben támogatott térinformatikai rendszerekben (SRID: 23700).</li>
     </ul>
-    
+
     <h3>Miért érdemes a KoordKonvertet használni?</h3>
-    <p>A KoordKonvert egyszerű, gyors és offline elérhető megoldást kínál a földrajzi és UTM koordináták kezelésére és átváltására. Különösen hasznos terepen, hálózati kapcsolat nélkül. Az OpenStreetMap és Google Maps integrációval térképes vizualizáció is elérhető.</p>
+    <p>A KoordKonvert egyszerű, gyors és offline elérhető megoldást kínál a földrajzi, UTM, MGRS és EOV koordináták kezelésére és átváltására. Különösen hasznos terepen, hálózati kapcsolat nélkül. Az OpenStreetMap és Google Maps integrációval térképes vizualizáció is elérhető.</p>
     <p><strong>Töltsd le most a KoordKonvertet, és válts át koordinátáidat bárhol, bármikor!</strong></p>
     <p><strong>Kapcsolat:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
     <p><a href="privacy-policy.html">Adatvédelmi tájékoztató - kattints ide</a></p>
