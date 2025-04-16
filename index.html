@@ -324,52 +324,55 @@
 </div>
 
 
+
 <!-- Hungarian Coordinate Systems Dropdown -->
 <button class="accordion">
     <img src="images/hun_flag.png" alt="Magyar zászló" width="60" height="40">
     Koordináta-rendszerek átváltása offline
 </button>
 <div class="accordion-content" lang="hu">
-    <p class="last-updated">Utolsó frissítés: 2025. március 20.</p>
+    <p class="last-updated">Utolsó frissítés: 2025. április 16.</p>
     <h2>Koordináta-rendszerek átváltása offline</h2>
-    <p>A <strong>KoordKonvert</strong> alkalmazás lehetőséget biztosít különféle koordináta-rendszerek közötti átváltásra internetkapcsolat nélkül. Ez különösen hasznos földmérők, katonai egységek, túrázók, természetjárók, mentőszolgálatok és térinformatikai szakemberek számára. A program támogatja a következő rendszereket: <strong>Decimal Degrees (DD), Degrees Decimal Minutes (DDM), Degrees Minutes Seconds (DMS), Universal Transverse Mercator (UTM), Military Grid Reference System (MGRS), valamint az Egységes Országos Vetület (EOV)</strong>.</p>
-
-    <h3>Bevezetés a koordináta-rendszerekbe</h3>
-    <p>A koordináta-rendszerek célja, hogy a Föld felszínén bármely pont helyzete egyértelműen megadható legyen. Ehhez valamilyen matematikai modellre (geoid, ellipszoid) és referenciarendszerre van szükség. A leggyakrabban használt modellek az ellipszoid alakú referenciagömbök (pl. WGS84), amelyek a Föld forgási ellipszoidját közelítik. A helymeghatározás történhet gömbi (földrajzi) vagy síkbeli (vetületi) koordinátákkal, attól függően, hogy milyen célra használjuk az adatokat (pl. GPS, térképészet, katonai alkalmazások).</p>
-
-    <h3>Földrajzi koordináta-rendszer</h3>
-    <p>A földrajzi koordináta-rendszer a Föld felszínén lévő pontok helyét <strong>szélesség</strong> (latitude, φ) és <strong>hosszúság</strong> (longitude, λ) segítségével adja meg. A szélesség a pont és az Egyenlítő síkja közötti szög, a hosszúság a greenwichi kezdőmeridiánhoz viszonyított eltérés. A koordináták gömbi rendszert alkotnak, ahol a pontok egy szögpárként jelennek meg a földfelszínhez viszonyítva. A mértékegységük fok (°), perc (′), másodperc (″), de használatosak a tizedes formátumok is.</p>
-    <p>Példa formátumokra:</p>
+    <p>A <strong>KoordKonvert</strong> alkalmazás lehetőséget biztosít különféle koordináta-rendszerek közötti offline átváltásra. A földmérők, túrázók, katonák, mentők, természetvédők és térinformatikusok számára nélkülözhetetlen eszköz, ha internetkapcsolat nélküli, mégis precíz helymeghatározásra van szükség. A támogatott rendszerek:</p>
     <ul>
-        <li><strong>Decimal Degrees (DD):</strong> 47.49897°, 19.04360°</li>
-        <li><strong>Degrees Decimal Minutes (DDM):</strong> 47° 29.938′, 19° 2.616′</li>
-        <li><strong>Degrees Minutes Seconds (DMS):</strong> 47° 29′ 56″, 19° 2′ 37″</li>
+        <li><strong>DD</strong> – Decimal Degrees</li>
+        <li><strong>DDM</strong> – Degrees Decimal Minutes</li>
+        <li><strong>DMS</strong> – Degrees Minutes Seconds</li>
+        <li><strong>UTM</strong> – Universal Transverse Mercator</li>
+        <li><strong>MGRS</strong> – Military Grid Reference System</li>
+        <li><strong>EOV</strong> – Egységes Országos Vetület</li>
     </ul>
-    <p>A földrajzi koordináták leggyakrabban a <strong>WGS84</strong> ellipszoidhoz viszonyítva jelennek meg, amely a GPS globális szabványa is.</p>
 
-    <h3>Vetületi koordináta-rendszerek</h3>
-    <p>Mivel a Föld gömbölyű, síkbeli térképeken való megjelenítéséhez vetületi rendszerek szükségesek. Ezek matematikai módszerek, melyek a Föld felszínét valamilyen síkfelületre vetítik át, torzításokkal. A vetület típusa meghatározza, hogy milyen tulajdonságokat (szögtartás, területtartás, hosszúságtartás) őriz meg a térkép.</p>
+    <h3>1. Földrajzi koordináta-rendszer (geodéziai vagy gömbi)</h3>
+    <p>A földrajzi koordináták a Földön egy pont elhelyezkedését a gömbi rendszerben adják meg, a <strong>szélesség (φ)</strong> és a <strong>hosszúság (λ)</strong> szögei alapján, fokban mérve. Alapja általában a <strong>WGS84</strong> referenciaellipszoid. A rendszer az egyenlítőhöz és a greenwichi kezdőmeridiánhoz képest számol, például: <em>47.49897°, 19.04360°</em>.</p>
+    <p>A megadás formátumai:</p>
+    <ul>
+        <li><strong>DD:</strong> 47.49897°, 19.04360°</li>
+        <li><strong>DDM:</strong> 47° 29.938′, 19° 2.616′</li>
+        <li><strong>DMS:</strong> 47° 29′ 56″, 19° 2′ 37″</li>
+    </ul>
 
-    <h4>UTM (Universal Transverse Mercator)</h4>
-    <p>Az UTM rendszer a Föld felszínét 60 darab, egyenként 6° szélességű zónára osztja, az Egyenlítőtől délre 80°-tól északra 84°-ig. Minden zóna külön síkbeli vetületet kap. A Transzverzális Mercator-vetület biztosítja, hogy a zónán belül a torzítás minimális maradjon. A koordináták méterben vannak megadva: az <strong>easting</strong> (kelet) 500 000 m-ről indul (a zóna középmeridiánja), a <strong>northing</strong> (észak) értéke az Egyenlítőtől számított távolság. A déli féltekén mesterségesen 10 000 000 m-hez viszonyítják a northing értéket, hogy pozitív maradjon.</p>
+    <h3>2. UTM – Universal Transverse Mercator</h3>
+    <p>Az UTM egy síkbeli vetületi rendszer, amely a Földet 60, egyenként 6° szélességű zónára osztja. A Transzverzális Mercator-vetület biztosítja a minimális torzítást. A koordináták méterben vannak megadva, a zóna középmeridiánjától (easting) és az Egyenlítőtől (northing) mért távolság szerint. A déli féltekén a northing értéket 10 000 000 m-rel növelik, hogy elkerüljék a negatív számokat.</p>
     <p><strong>Példa:</strong> 34T 352920 m E, 5263357 m N (Magyar Parlament)</p>
 
-    <h4>MGRS (Military Grid Reference System)</h4>
-    <p>Az MGRS az UTM zónákon alapuló rácsalapú rendszer, amelyet a NATO és más katonai szervezetek használnak. Egy MGRS kód egyértelműen meghatározza egy adott pont helyzetét 1 méteres pontossággal. A rendszer felosztja az UTM zónákat 100x100 km-es rácsokra, amelyeket két betűvel jelöl (pl. CT), majd további numerikus koordináták következnek, amelyek méterben határozzák meg a pozíciót ezen belül.</p>
-    <p><strong>Példa:</strong> 34TCT6720037400</p>
+    <h3>3. MGRS – Military Grid Reference System</h3>
+    <p>Az MGRS az UTM zónákon alapuló, rácsalapú katonai helyazonosító rendszer. A zónák 100×100 km-es négyzetekre osztódnak, amelyek két betűvel vannak jelölve (pl. CT), ezt követik a finomabb méter alapú koordináták. Egy MGRS kód így néz ki: <em>34TCT6720037400</em>, ahol a számok a keleti és északi eltolást jelentik méterben.</p>
+    <p>Katonai jelentésekben, GPS eszközökben, NATO-térképeken szabványosított. Az MGRS előnye a gyors olvashatóság és az egyértelmű térbeli azonosítás.</p>
 
-    <h4>EOV (Egységes Országos Vetület)</h4>
-    <p>Az EOV a magyarországi hivatalos síkbeli vetületi rendszer, amelyet 1975-ben vezettek be a földmérés és térképezés céljából. Ferdetengelyű szögtartó vetület, amely a <strong>HD72 (Hungarian Datum 1972)</strong> ellipszoidon alapszik, és az <strong>IUGG67</strong> forgási ellipszoid paramétereit használja. A vetület célja, hogy az ország teljes területén egy vetületi rendszer biztosítson pontos méréseket. A koordináták méterben vannak megadva: az <strong>X</strong> az északi, az <strong>Y</strong> a keleti irányt jelöli. A rendszer eltolást tartalmaz (X: +200 000 m, Y: +650 000 m), hogy az összes érték pozitív legyen, és az első koordináta-negyedbe essen.</p>
-    <p><strong>Példa:</strong> 650000 Y, 200000 X</p>
-    <p>Az EOV transzformációja WGS84/ETRS89 rendszerekből szabvány szerint (MSZ 7222:2002) történik, és SRID 23700 azonosítóval van ellátva a térinformatikai szoftverekben.</p>
+    <h3>4. EOV – Egységes Országos Vetület</h3>
+    <p>Az EOV a hivatalos magyar vetületi rendszer, melyet a HD72 dátum alapján hoztak létre. Ferdetengelyű, szögtartó vetület az IUGG67 ellipszoidra illesztve. Az X tengely az észak, az Y a kelet irányt jelenti, és a koordinátákhoz mesterséges eltolás tartozik (X: +200 000 m, Y: +650 000 m), hogy minden pont pozitív tartományba essen.</p>
+    <p><strong>Példa:</strong> 200000 X, 650000 Y</p>
+    <p>A rendszer támogatja a WGS84/ETRS89 konverziót, amelyet az <strong>MSZ 7222:2002</strong> szabvány ír le. A térinformatikai rendszerekben <strong>SRID: 23700</strong> azonosítóval szerepel.</p>
 
-    <h3>A KoordKonvert előnyei</h3>
-    <p>A KoordKonvert lehetővé teszi a különböző koordináta-rendszerek közötti gyors és pontos átváltást akár internetkapcsolat nélkül is. A felhasználóbarát kezelőfelület, valamint az OpenStreetMap és opcionálisan Google Térkép integráció vizuális ellenőrzést is biztosít. Az alkalmazás ideális választás mindazoknak, akik terepen dolgoznak, és megbízható koordináta-kezelésre van szükségük – legyen szó katonai, földmérési, túrázási vagy kutató-mentő felhasználásról.</p>
+    <h3>Miért érdemes a KoordKonvertet használni?</h3>
+    <p>A KoordKonvert egyszerű, gyors és offline elérhető megoldást kínál többféle nemzetközi és hazai koordináta-rendszer kezelésére. Különösen hasznos, ha terepen vagyunk, távol a hálózattól. Az OpenStreetMap és a Google Maps integráció segítségével térképes vizualizáció is elérhető.</p>
 
     <p><strong>Töltsd le most a KoordKonvertet, és válts át koordinátáidat bárhol, bármikor!</strong></p>
     <p><strong>Kapcsolat:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
     <p><a href="privacy-policy.html">Adatvédelmi tájékoztató - kattints ide</a></p>
 </div>
+
 
         
         <p>
