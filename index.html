@@ -109,6 +109,27 @@
             justify-content: center;
             margin: 20px 0;
         }
+
+
+     /* listák stílusa */
+        .coords-list {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              font-family: sans-serif;
+        }
+
+        .coords-list li {
+              display: flex;
+              gap: 1ch; /* kis hézag a rövidítés és magyarázat között */
+        }
+
+        .coords-list .abbr {
+              width: 4ch; /* fix szélesség, így szépen igazít */
+              font-weight: bold;
+          flex-shrink: 0; /* ne zsugorodjon */
+        }
+
         
         /* Legördülő menü stílusa */
         .accordion {
@@ -373,14 +394,15 @@
 <div class="accordion-content" lang="hu">
     <h2>Koordináta-rendszerek átváltása offline</h2>
     <p>A <strong>KoordKonvert</strong> alkalmazás lehetőséget biztosít különféle koordináta-rendszerek közötti offline átváltásra. A földmérők, túrázók, katonák, mentők, természetvédők és térinformatikusok számára nélkülözhetetlen eszköz, ha internetkapcsolat nélküli, mégis precíz helymeghatározásra van szükség. A támogatott rendszerek:</p>
-    <ul>
-        <li><strong>DD</strong> – Tizedes fok</li>
-        <li><strong>DDM</strong> – Fok, Tizedes szögperc</li>
-        <li><strong>DMS</strong> – Fok, Szögperc, Szögmásodperc</li>
-        <li><strong>UTM</strong> – Univerzális Transzverzális Mercator</li>
-        <li><strong>MGRS</strong> – Katonai Koordinátahálózati Rendszer</li>
-        <li><strong>EOV</strong> – Egységes Országos Vetület</li>
-    </ul>
+  
+    <ul class="coords-list">
+    <li><span class="abbr">DD</span> – Tizedes fok</li>
+    <li><span class="abbr">DDM</span> – Fok, Tizedes szögperc</li>
+    <li><span class="abbr">DMS</span> – Fok, Szögperc, Szögmásodperc</li>
+    <li><span class="abbr">UTM</span> – Univerzális Transzverzális Mercator</li>
+    <li><span class="abbr">MGRS</span> – Katonai Koordinátahálózati Rendszer</li>
+    <li><span class="abbr">EOV</span> – Egységes Országos Vetület</li>
+</ul>
 
     <h3>1) Földrajzi koordináta-rendszer (geodéziai vagy gömbi)</h3>
     <p>A földrajzi koordináta-rendszer a Föld felszínén egy pont helyét a <strong>szélesség (φ)</strong> és a <strong>hosszúság (λ)</strong> szögeivel határozza meg, fokban mérve. Alapja általában a <strong>WGS84</strong> referenciaellipszoid. A rendszer az Egyenlítőhöz és a greenwichi kezdőmeridiánhoz viszonyít.</p>
