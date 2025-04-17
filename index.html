@@ -273,13 +273,12 @@
 </div>
 
 
-        <!-- Angol legördülő menü -->
+        <!-- Angol legördülő menü - About -->
 <button class="accordion">
     <img src="images/eng_us_flag.png" alt="English flag">
     KoordKonvert - About
 </button>
 <div class="accordion-content">
-    <p class="last-updated">Last Updated: March 20, 2025</p>
     <p><strong>KoordKonvert – The Coordinate Converter App</strong></p>
     <p>Easily convert between coordinate formats and visualize them on a map with KoordKonvert. Whether you're a hiker, surveyor, soldier or geospatial enthusiast, this app simplifies working with coordinates like Decimal Degrees (DD), Decimal Degrees Minutes (DDM), Degrees Minutes Seconds (DMS), UTM (Universal Transverse Mercator), MGRS (Military Grid Reference System), and even regional systems like EOV (Hungary) - with more formats coming soon!</p>
 
@@ -314,13 +313,12 @@
     <p><a href="privacy-policy.html">Privacy Policy - click here</a></p>
 </div>
 
-        <!-- Magyar legördülő menü -->
+        <!-- Magyar legördülő menü - Névjegy-->
 <button class="accordion">
     <img src="images/hun_flag.png" alt="Hungarian flag">
     KoordKonvert - Névjegy
 </button>
 <div class="accordion-content">
-    <p class="last-updated">Utolsó frissítés: 2025. március 20.</p>
     <p><strong>KoordKonvert - A koordináta-átváltó app</strong></p>
     <p>A KoordKonvert segítségével egyszerűen válthatod át a különböző koordinátaformátumokat, és térképen is megjelenítheted őket. Legyél túrázó, földmérő, katona, rendőr vagy erdész, ez az alkalmazás megkönnyíti a koordináták kezelését, például a fok (DD), fok-szögperc (DDM), fok-szögperc-szögmásodperc (DMS), UTM, MGRS, valamint regionális rendszerek, mint az EOV (Egységes Országos Vetület) használatát – és hamarosan még több formátum érkezik!</p>
 
@@ -354,35 +352,98 @@
 </div>
     
 
-<!-- English EOV Dropdown -->
+<!-- Angol legördülő menü - Coordinate Systems -->
 <button class="accordion">
-    <img src="images/eng_us_flag.png" alt="Angol zászló" width="60" height="40">
-    EOV Coordinate Converter (MGRS, UTM, DD, DDM, DMS)
+    <img src="images/eng_us_flag.png" alt="English flag" width="60" height="40">
+    Coordinate Systems Overview
 </button>
 <div class="accordion-content" lang="en">
-    <p class="last-updated">Last Updated: March 20, 2025</p>
-    <h2>EOV Coordinate Converter with MGRS, UTM, DD, DDM, DMS</h2>
-    <p>KoordKonvert supports <strong>EOV coordinate conversion</strong> alongside global standards like <strong>MGRS converter</strong>, <strong>UTM converter</strong>, <strong>DD converter</strong>, <strong>DDM converter</strong>, and <strong>DMS converter</strong>. Whether you're working with Hungary's EOV system or international formats, our app provides precise, offline conversions.</p>
-    
-    <h3>What is EOV (Hungarian National Grid)?</h3>
-    <p>EOV (Egységes Országos Vetület) is Hungary's official coordinate system, widely used in surveying, mapping, and geospatial applications. KoordKonvert supports <strong>EOV coordinate conversion</strong> to formats like DD (Decimal Degrees), DDM (Degrees Decimal Minutes), DMS (Degrees Minutes Seconds), UTM (Universal Transverse Mercator), or MGRS (Military Grid Reference System), even offline, making it ideal for surveyors, foresters, or hikers needing <strong>offline EOV conversion</strong> without an internet connection.</p>
-    
-    <h3>Supported Coordinate Systems</h3>
-    <p><strong>MGRS Converter:</strong> Convert to Military Grid Reference System, used by NATO for precise location mapping.</p>
-    <p><strong>UTM Converter:</strong> Transform coordinates to Universal Transverse Mercator for global mapping applications.</p>
-    <p><strong>DD Converter:</strong> Convert to Decimal Degrees (e.g., 47.12345°), a standard for GPS.</p>
-    <p><strong>DDM Converter:</strong> Use Degrees Decimal Minutes (e.g., 47° 7.407'), common in navigation.</p>
-    <p><strong>DMS Converter:</strong> Switch to Degrees Minutes Seconds (e.g., 47° 7' 24.42"), often used in traditional surveying.</p>
-    
-    <h3>Why Use KoordKonvert for EOV and Global Conversions?</h3>
-    <p>Our app is offline-ready, ensuring you can perform conversions anywhere. With support for EOV, MGRS, UTM, DD, DDM, and DMS, KoordKonvert is perfect for professionals and enthusiasts needing accurate coordinate transformations.</p>
-    
-    <p><strong>Download KoordKonvert now for seamless EOV and global coordinate conversions!</strong></p>
+    <h2>Offline Coordinate Conversion</h2>
+    <p><strong>KoordKonvert</strong> offers seamless offline conversion between multiple coordinate systems, making it a vital tool for surveyors, hikers, military personnel, first responders, and geospatial professionals. It ensures accurate positioning even without internet access. Supported systems include:</p>
+  
+    <ul class="coords-list">
+        <li><span class="abbr">DD</span> – Decimal Degrees</li>
+        <li><span class="abbr">DDM</span> – Degrees, Decimal Minutes</li>
+        <li><span class="abbr">DMS</span> – Degrees, Minutes, Seconds</li>
+        <li><span class="abbr">UTM</span> – Universal Transverse Mercator</li>
+        <li><span class="abbr">MGRS</span> – Military Grid Reference System</li>
+        <li><span class="abbr">EOV</span> – Hungarian National Grid</li>
+    </ul>
+
+    <h3>1) Geographic Coordinate System</h3>
+    <p>The geographic coordinate system locates points on Earth using <strong>latitude (φ)</strong> and <strong>longitude (λ)</strong>, measured in degrees. Based on the <strong>WGS84</strong> ellipsoid, it references the Equator and Greenwich Prime Meridian.</p>
+    <h4>Latitude (φ)</h4>
+    <p>Latitude measures the angle between a point and the Equator, ranging from 0° (Equator) to ±90° (North Pole: +90°, South Pole: -90°). Northern latitudes are positive (N), southern negative (S). Parallels connect points of equal latitude.</p>
+    <h4>Longitude (λ)</h4>
+    <p>Longitude measures the angle from the Greenwich Meridian, ranging from 0° to ±180°. Eastern longitudes are positive (E), western negative (W). Meridians connect points of equal longitude, meeting at the poles.</p>
+    <h4>Formats</h4>
+    <p>Coordinates can be expressed as:</p>
+    <ul>
+        <li><strong>DD (Decimal Degrees):</strong> e.g., 51.5074°, -0.1278°</li>
+        <li><strong>DDM (Degrees, Decimal Minutes):</strong> e.g., 51° 30.444′ N, 0° 7.668′ W</li>
+        <li><strong>DMS (Degrees, Minutes, Seconds):</strong> e.g., 51° 30′ 26.64″ N, 0° 7′ 40.08″ W</li>
+    </ul>
+    <p>Example: London’s Big Ben is approximately <em>N 51° 30′ 26.64″, W 0° 7′ 40.08″</em> (DMS) or <em>51.5074°, -0.1278°</em> (DD).</p>
+
+    <h3>2) UTM – Universal Transverse Mercator</h3>
+    <p><strong>UTM</strong> is a planar coordinate system dividing Earth into 60 zones, each 6° wide, from 80°S to 84°N. Zones are split into latitudinal bands (C to X, excluding I and O).</p>
+    <h4>Zones and Bands</h4>
+    <p>Zones are numbered 1–60, starting at 180° longitude and moving eastward. Bands span 8° of latitude, from C (80°S) to X (84°N). For example, London is in zone <strong>30U</strong>.</p>
+    <h4>Coordinates</h4>
+    <p>UTM coordinates are meter-based, measuring <em>easting</em> (distance from the zone’s central meridian) and <em>northing</em> (distance from the Equator). The central meridian is set at 500,000 m easting to avoid negative values.</p>
+    <p>Example: Big Ben’s UTM coordinates are approximately <em>30U 699947 m E, 5710336 m N</em>.</p>
+    <h4>Advantages</h4>
+    <ul>
+        <li>Grid-based for consistent distances.</li>
+        <li>Meter-based for easy calculations.</li>
+        <li>No negative coordinates.</li>
+    </ul>
+
+    <h3>3) MGRS – Military Grid Reference System</h3>
+    <p><strong>MGRS</strong> is a NATO-standard system based on UTM, using a grid for precise positioning. It divides Earth into 6° zones and 100×100 km squares.</p>
+    <h4>Zones and Squares</h4>
+    <p>MGRS uses UTM zones (1–60) and bands (C–X). Each zone is split into 100×100 km squares, identified by two letters (A–Z, excluding I and O). London is in <strong>30UUB</strong>.</p>
+    <h4>Coordinates</h4>
+    <p>MGRS coordinates include a zone, square identifier, and meter-based easting/northing offsets. Accuracy ranges from 1 m to 10 km based on digit count.</p>
+    <p>Example: Big Ben’s MGRS coordinate is <em>30UUB999470336</em> (1 m accuracy).</p>
+    <p>Accuracy levels:</p>
+    <ul>
+        <li><strong>30U</strong> – Zone, ~600×800 km</li>
+        <li><strong>30UUB</strong> – 100 km square</li>
+        <li><strong>30UUB99</strong> – 10 km</li>
+        <li><strong>30UUB99933</strong> – 1 km</li>
+        <li><strong>30UUB99970336</strong> – 100 m</li>
+        <li><strong>30UUB999470336</strong> – 1 m</li>
+    </ul>
+    <h4>Advantages</h4>
+    <ul>
+        <li>Fast, map-friendly positioning.</li>
+        <li>Meter-based, readable coordinates.</li>
+        <li>Widely used in military and geospatial applications.</li>
+    </ul>
+
+    <h3>4) EOV – Hungarian National Grid</h3>
+    <p><strong>EOV</strong> (Hungarian National Grid) is Hungary’s official system for mapping and surveying, introduced in 1975. It uses an oblique cylindrical projection based on the HD72 datum.</p>
+    <h4>Projection and Axes</h4>
+    <p>EOV covers Hungary with one projection. Its axes are oriented northeast: X (north), Y (east), based on a reference meridian and its perpendicular.</p>
+    <h4>Coordinates</h4>
+    <p>Coordinates are meter-based with offsets (X: +200,000 m, Y: +650,000 m) to keep values positive. X is always <400,000 m, Y >400,000 m to avoid axis confusion.</p>
+    <p>Example: A reference point in Budapest is approximately <em>X: 190000 m, Y: 650000 m</em>.</p>
+    <h4>Advantages</h4>
+    <ul>
+        <li>Unified projection for Hungary.</li>
+        <li>Meter-based for precise measurements.</li>
+        <li>Supported in geospatial systems (SRID: 23700).</li>
+    </ul>
+
+    <h3>Why KoordKonvert?</h3>
+    <p>KoordKonvert provides a fast, offline solution for converting geographic, UTM, MGRS, and EOV coordinates. Ideal for fieldwork, it includes OpenStreetMap and Google Maps for visualization.</p>
+    <p><a href="https://play.google.com/store/apps/details?id=com.flori.koordkonvert"><strong>Download KoordKonvert</strong></a> now and manage coordinates anywhere!</p>
     <p><strong>Contact:</strong> <a href="mailto:koordkonvert@gmail.com">koordkonvert@gmail.com</a></p>
     <p><a href="privacy-policy.html">Privacy Policy - click here</a></p>
 </div>
 
-<!-- Hungarian Coordinate Systems Dropdown -->
+<!-- Magyar legördülő menü - Koordinátarendszerek típusai -->
 <button class="accordion">
     <img src="images/hun_flag.png" alt="Magyar zászló" width="60" height="40">
     Koordináta-rendszerek típusai
