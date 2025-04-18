@@ -41,19 +41,25 @@
             right: 10px;
             display: flex;
             align-items: center;
-            color: white;
-            font-size: 1.2em;
-            padding: 8px 12px;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
             background-color: rgba(0, 128, 128, 0.7);
-            border-radius: 5px;
+            border-radius: 50%;
             text-decoration: none;
+            transition: background-color  Wight: 40px;
+            height: 40px;
+            background-color: rgba(0, 128, 128, 0.7);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
         .home-button:hover {
             background-color: rgba(0, 128, 128, 0.9);
         }
         .home-icon {
-            font-size: 1em;
-            margin-right: 5px;
+            color: white;
+            font-size: 1.2em;
         }
         /* Fejléc címe */
         header h1 {
@@ -178,11 +184,11 @@
                 right: 10px;
             }
             .home-button {
-                font-size: 1em;
-                padding: 6px 10px;
+                width: 36px;
+                height: 36px;
             }
             .home-icon {
-                font-size: 0.9em;
+                font-size: 1em;
             }
         }
         /* Extra kicsi képernyőkre (400px alatt) */
@@ -196,6 +202,13 @@
             header h1 {
                 font-size: 1.4em;
             }
+            .home-button {
+                width: 32px;
+                height: 32px;
+            }
+            .home-icon {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -204,12 +217,11 @@
         <a href="https://koordkonvert.github.io/" class="logo">
             <img src="images/koordkonvert_logo1.png" alt="Koordkonvert logó">
         </a>
-        <a href="https://koordkonvert.github.io/" class="home-button" aria-label="Vissza a kezdőlapra">
+        <a href="https://koordkonvert.github.io/" class="home-button" aria-label="Vissza a kezdőlapra" title="Vissza a kezdőlapra">
             <i class="fas fa-home home-icon"></i>
-            <span>Kezdőlap</span>
         </a>
         <h1>Privacy Policy - KoordKonvert</h1>
-    </header>
+</header>
     <div class="container">
         <!-- Angol legördülő menü -->
         <button class="accordion">
