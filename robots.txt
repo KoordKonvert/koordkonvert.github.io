@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /sitemap.xml
+Sitemap: https://koordkonvert.github.io/sitemap.xml
